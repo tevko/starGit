@@ -1,0 +1,47 @@
+//globals
+
+html {
+	min-height: 100%;
+	-webkit-perspective: 100em;
+	background-image: url('../../assets/img/texture.svg');
+	background-size: cover;
+}
+
+//border box all the things
+
+* {
+    box-sizing: border-box;
+}
+
+//Force Children to self clear
+
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.global {
+	&_content {
+		//padding: 0 15px;
+	}
+	&_modal {
+		display: none;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: rgba(255, 224, 0, 0.78);
+	}
+}
+
+a {
+	text-decoration: none;
+	color: $secondary;
+}
+
+.overflowTall {
+	max-height: 500px;
+	overflow-y: scroll;
+}

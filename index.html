@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Stargit - Keep better track of your favorite Github repositories</title>
+        <meta name="description" content="Stargit - Keep better track of your favorite Github repositories">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js" async></script>
+    </head>
+    <body class="group">
+    	<div class="global_modal"></div>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header class="global_header" role="banner">
+        	<h1 class="global_header--logo">Stargit</h1>
+        	<p>Keep Better Track of your Favorite Repositories</p>
+        </header>
+        <section class="global_content group" role="main">
+        	<div class="prompt">
+        		<label for="username">Enter your Github Username</label>
+        		<input type="text" id="username">
+        		<button class="show-content">Go</button> 
+        	</div>
+        	<div class="results">
+        	.
+        	</div>
+        </section>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/pagedown/1.0/Markdown.Converter.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+        <script src="assets/js/main.min.js"></script>
+        <!-- browser-sync 
+        <script type='text/javascript'>
+        	//<![CDATA[
+        		;document.write("<script defer src='//HOST:3000/socket.io/socket.io.js'><\/script><script defer src='//HOST:3001/client/browser-sync-client.0.9.1.js'><\/script>".replace(/HOST/g, location.hostname));
+        	//]]>
+        </script>
+         end browser-sync -->
+    </body>
+</html>

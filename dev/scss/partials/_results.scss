@@ -1,0 +1,105 @@
+
+.results_details {
+	display: none;
+	position: absolute;
+	background-color: $primary;
+  	color: white;
+	padding: 2em;
+	left: 0;
+	right: 0;
+	top: 0;
+	margin: 5%;
+	z-index: 999;
+	&--exit {
+		position: absolute;
+		right: 0;
+		top: 0;
+		margin: 10px 10px 0 0;
+		cursor: pointer;
+	}
+	.title {
+		font-size: 2em;
+	}
+	a {
+		display: block;
+	}
+	.latest {
+		text-decoration: underline;
+	}
+}
+
+.results {
+	display: block;
+	margin: 0 auto;
+	padding: 5px;
+	background-color: rgba(0, 0, 0, 0.31);
+	@include bp(large) {
+		max-width: 550px;
+	}
+	h2 {
+		text-align: center;
+	}
+	li {
+		color: $secondary;
+		cursor: pointer;
+		padding: 7px 0 7px 10px;
+		transition: .5s ease all;
+		&:hover {
+			background-color: $primary;
+		}
+		.name {
+			font-weight: bold;
+			display: block;
+		}
+	}
+}
+
+.results_loading {
+	margin-top: 1em;
+	position: absolute;
+	left: 0;
+	right: 0;
+	height: 100%;
+	z-index: 1000;
+	animation:swivelKinda 1s ease-in-out infinite alternate;
+	transform-style: preserve-3d;
+	&::before {
+		content: 'Just loading some stuff';
+		position: absolute;
+		padding: 1em;
+		line-height: normal;
+		top: 0;
+		bottom: 0;
+		display: block;
+		text-align: center;
+		font-size: 3em;
+		background-color: $primary;
+		color: $secondary;
+		right: 0;
+		left: 0;
+	}
+}
+
+//the loading animation
+
+@keyframes swivelKinda {
+
+	from {
+		transform: rotateY(-20deg);
+	}
+	
+	to {
+		transform: rotateY(20deg);
+	}
+}
+
+.readmeFile {
+	padding: 20px;
+	background-color: lighten($primary, 20%);
+	h2 {
+		text-align: left;
+	}
+	a {
+		display: inline;
+	}
+}

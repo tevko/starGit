@@ -1,0 +1,22 @@
+//header
+
+.global_header {
+	text-align: center;
+	background-color: $primary;
+	overflow: auto;
+	color: white;
+	border-bottom: solid 3px $secondary;
+	&--logo {
+		font-size: 1.5em;
+		margin-bottom: 0;
+	}
+	p {
+		margin-top: 15px;
+		line-height: normal;
+		font-style: italic;
+	}
+	@include bp(large) {
+		padding: 2em 0;
+		font-size: 1.25em;
+	}
+}

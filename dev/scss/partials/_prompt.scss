@@ -1,0 +1,35 @@
+.prompt {
+	margin: 0 auto;
+	text-align: center;
+	padding: 1.5em 15px;
+	@include bp(large) {
+		margin-top: 1em;
+	}
+	label, input {
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 1.5em;
+		width: 100%;
+	}
+	button {
+		border: none;
+		padding: .75em 2.5em;
+		background-color: $primary;
+		color: white;
+		font-weight: bold;
+		transition: .5s ease;
+		outline: none;
+		&:hover {
+			box-shadow: inset 1px 1px 50px 1px $secondary;
+		}
+	}
+	input {
+		padding: .5em;
+		text-align: center;
+		background-color: rgba(255, 255, 255, 0.4);
+		border: none;
+		@include bp(large) {
+			width: 550px;
+		}
+	}
+}
