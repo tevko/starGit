@@ -32,6 +32,9 @@ var s,
 			    setTimeout(function() {
 			    	$('.results').removeClass('results_loading');
 			    }, 2000);
+			}).fail(function() {
+				$('.results').removeClass('results_loading');
+				alert('Please enter a valid username!');
 			});
 		},
 };

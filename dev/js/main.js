@@ -10,9 +10,6 @@
         //modal functionality
         $(document.body).on('click', '.name' ,function() {
         	var showModal = new gitModals($(this));
-        	//if the element is over a specific height, add a class to it
-
-        	
         });
     });
 })(jQuery , window );

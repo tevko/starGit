@@ -32,6 +32,9 @@ var s,
 			    setTimeout(function() {
 			    	$('.results').removeClass('results_loading');
 			    }, 2000);
+			}).fail(function() {
+				$('.results').removeClass('results_loading');
+				alert('Please enter a valid username!');
 			});
 		},
 };
@@ -62,9 +65,8 @@ $.extend(gitModals.prototype, {
 		$.getJSON(s.gitrepostart + repoOwner + '/' + repoName + s.gitrepoend).done(function(data) {
 			$('.commitView').empty();
 			var getCommit = $('.commitView').append(data[0].commit.message);
-			if (getCommit.height() > 200) {
-				$('.readmeFile').addClass('overflowTall');
-			}
+		}).fail(function() {
+			alert('Looks like we\'ve exceeded the API rate limit! Check back in a minute or so!');
 		});
 		//get Readme file
 		$.getJSON(s.gitrepostart + repoOwner + '/' + repoName + '/readme').done(function(data) {
@@ -74,14 +76,9 @@ $.extend(gitModals.prototype, {
 			var converter = new Markdown.Converter();
 			var mdFile = converter.makeHtml(toHtml);
 			var getFile = $('.readmeFile').append(mdFile);
-			setTimeout(function() {
-				if (getFile.height() > 500) {
-					$('.readmeFile').addClass('overflowTall');
-				}
-			}, 500);
 		});
 		//close the modals
-		$(document.body).on('click', '.results_details--exit' ,function(){
+		$(document.body).on('click', '.results_details--exit, .global_modal' ,function(){
 			$('.results_details').hide();
 			s.modal.hide();
 		});
@@ -99,9 +96,6 @@ $.extend(gitModals.prototype, {
         //modal functionality
         $(document.body).on('click', '.name' ,function() {
         	var showModal = new gitModals($(this));
-        	//if the element is over a specific height, add a class to it
-
-        	
         });
     });
 })(jQuery , window );

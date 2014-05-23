@@ -301,7 +301,7 @@ a {
 }
 
 /* line 44, ../scss/partials/_globals.scss */
-.overflowTall {
+.overflowTall, .results_details {
   max-height: 500px;
   overflow-y: scroll;
 }
@@ -358,7 +358,7 @@ a {
 /* line 2, ../scss/partials/_results.scss */
 .results_details {
   display: none;
-  position: absolute;
+  position: fixed;
   background-color: #464646;
   color: white;
   padding: 2em;
@@ -368,7 +368,7 @@ a {
   margin: 5%;
   z-index: 999;
 }
-/* line 13, ../scss/partials/_results.scss */
+/* line 14, ../scss/partials/_results.scss */
 .results_details--exit {
   position: absolute;
   right: 0;
@@ -376,37 +376,36 @@ a {
   margin: 10px 10px 0 0;
   cursor: pointer;
 }
-/* line 20, ../scss/partials/_results.scss */
+/* line 21, ../scss/partials/_results.scss */
 .results_details .title {
   font-size: 2em;
 }
-/* line 23, ../scss/partials/_results.scss */
+/* line 24, ../scss/partials/_results.scss */
 .results_details a {
   display: block;
 }
-/* line 26, ../scss/partials/_results.scss */
+/* line 27, ../scss/partials/_results.scss */
 .results_details .latest {
   text-decoration: underline;
 }
 
-/* line 31, ../scss/partials/_results.scss */
+/* line 32, ../scss/partials/_results.scss */
 .results {
   display: block;
   margin: 0 auto;
-  padding: 5px;
   background-color: rgba(0, 0, 0, 0.31);
 }
 @media (min-width: 37.5em) {
-  /* line 31, ../scss/partials/_results.scss */
+  /* line 32, ../scss/partials/_results.scss */
   .results {
     max-width: 550px;
   }
 }
-/* line 39, ../scss/partials/_results.scss */
+/* line 40, ../scss/partials/_results.scss */
 .results h2 {
   text-align: center;
 }
-/* line 42, ../scss/partials/_results.scss */
+/* line 43, ../scss/partials/_results.scss */
 .results li {
   color: #c5be0f;
   cursor: pointer;
@@ -414,17 +413,17 @@ a {
   -webkit-transition: .5s ease all;
   transition: .5s ease all;
 }
-/* line 47, ../scss/partials/_results.scss */
+/* line 48, ../scss/partials/_results.scss */
 .results li:hover {
   background-color: #464646;
 }
-/* line 50, ../scss/partials/_results.scss */
+/* line 51, ../scss/partials/_results.scss */
 .results li .name {
   font-weight: bold;
   display: block;
 }
 
-/* line 57, ../scss/partials/_results.scss */
+/* line 58, ../scss/partials/_results.scss */
 .results_loading {
   margin-top: 1em;
   position: absolute;
@@ -432,13 +431,13 @@ a {
   right: 0;
   height: 100%;
   z-index: 1000;
-  -webkit-animation: swivelKinda 1s ease-in-out infinite alternate;
-  animation: swivelKinda 1s ease-in-out infinite alternate;
+  -webkit-animation: swivelKinda .5s ease-in-out infinite alternate;
+  animation: swivelKinda .5s ease-in-out infinite alternate;
   -webkit-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/* line 66, ../scss/partials/_results.scss */
+/* line 67, ../scss/partials/_results.scss */
 .results_loading::before {
   content: 'Just loading some stuff';
   position: absolute;
@@ -456,13 +455,13 @@ a {
 }
 
 @-webkit-keyframes swivelKinda {
-  /* line 87, ../scss/partials/_results.scss */
+  /* line 88, ../scss/partials/_results.scss */
   from {
     -webkit-transform: rotateY(-20deg);
     transform: rotateY(-20deg);
   }
 
-  /* line 91, ../scss/partials/_results.scss */
+  /* line 92, ../scss/partials/_results.scss */
   to {
     -webkit-transform: rotateY(20deg);
     transform: rotateY(20deg);
@@ -470,30 +469,30 @@ a {
 }
 
 @keyframes swivelKinda {
-  /* line 87, ../scss/partials/_results.scss */
+  /* line 88, ../scss/partials/_results.scss */
   from {
     -webkit-transform: rotateY(-20deg);
     -ms-transform: rotateY(-20deg);
     transform: rotateY(-20deg);
   }
 
-  /* line 91, ../scss/partials/_results.scss */
+  /* line 92, ../scss/partials/_results.scss */
   to {
     -webkit-transform: rotateY(20deg);
     -ms-transform: rotateY(20deg);
     transform: rotateY(20deg);
   }
 }
-/* line 96, ../scss/partials/_results.scss */
+/* line 97, ../scss/partials/_results.scss */
 .readmeFile {
   padding: 20px;
   background-color: #797979;
 }
-/* line 99, ../scss/partials/_results.scss */
+/* line 100, ../scss/partials/_results.scss */
 .readmeFile h2 {
   text-align: left;
 }
-/* line 102, ../scss/partials/_results.scss */
+/* line 103, ../scss/partials/_results.scss */
 .readmeFile a {
   display: inline;
 }
