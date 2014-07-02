@@ -10,6 +10,11 @@
         //modal functionality
         $(document.body).on('click', '.name' ,function() {
         	var showModal = new gitModals($(this));
+            $('html').addClass('htmlHeight');
         });
+        $(document.body).on('click', '.results_details--exit, .global_modal' ,function(){
+            $('html').removeClass('htmlHeight');
+        });
+
     });
 })(jQuery , window );

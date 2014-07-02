@@ -7,6 +7,10 @@ html {
 	background-size: cover;
 }
 
+.htmlHeight {
+    height: 100%;
+}
+
 //border box all the things
 
 * {
@@ -42,6 +46,6 @@ a {
 }
 
 .overflowTall {
-	max-height: 500px;
+	max-height: 85%;
 	overflow-y: scroll;
 }

@@ -42,5 +42,5 @@ $.extend(gitModals.prototype, {
 			$('.results_details').hide();
 			s.modal.hide();
 		});
-	} 
+	}
 });
